@@ -36,6 +36,9 @@ def build_model(in_dim=20, drate=0.5, out=64):
     mdl.add(Dense(out, activation='relu'))
     if drate:
         mdl.add(Dropout(drate))
+    mdl.add(Dense(out, activation='relu'))
+    if drate:
+        mdl.add(Dropout(drate))
     mdl.add(Dense(1, activation='sigmoid'))
 
     return mdl
@@ -75,8 +78,8 @@ if __name__ == '__main__':
     parser.add_argument("--input_dim", help="Input dimension for the network.", action='store', nargs='?', default=20, type=int)
     parser.add_argument("--bs", help="Number of rows or size of the tensor", action='store', nargs='?', default=10000, type=int)
     parser.add_argument("--output", help="Output from First & Hidden Layers", action='store',  nargs='?', default=64, type=int)
-    parser.add_argument("--train_batch_size", help="Training Batch Size", nargs='?', action='store', default=128, type=int)
-    parser.add_argument("--epochs", help="Number of epochs for training", nargs='?', action='store', default=20, type=int)
+    parser.add_argument("--train_batch_size", help="Training Batch Size", nargs='?', action='store', default=64, type=int)
+    parser.add_argument("--epochs", help="Number of epochs for training", nargs='?', action='store', default=30, type=int)
 
     args = parser.parse_args()
 
