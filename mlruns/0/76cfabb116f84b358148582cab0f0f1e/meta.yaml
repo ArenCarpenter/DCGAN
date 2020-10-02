@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/arencarpenter/Documents/DCGAN/mlruns/0/76cfabb116f84b358148582cab0f0f1e/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 76cfabb116f84b358148582cab0f0f1e
+run_uuid: 76cfabb116f84b358148582cab0f0f1e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1601662624091
+status: 1
+tags: []
+user_id: arencarpenter
