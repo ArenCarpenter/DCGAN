@@ -9,3 +9,5 @@ October 2020
 Testing workflow with PyCharm and GitHub Desktop with Keras models.
 
 Building Deep Convolutional Generative Adversarial Network for practice with workflow.
+
+Working to identify data sources, possibly using ALL cells from previous work.

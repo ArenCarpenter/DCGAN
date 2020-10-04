@@ -39,6 +39,9 @@ def build_model(in_dim=20, drate=0.5, out=64):
     mdl.add(Dense(out, activation='relu'))
     if drate:
         mdl.add(Dropout(drate))
+    mdl.add(Dense(out, activation='relu'))
+    if drate:
+        mdl.add(Dropout(drate))
     mdl.add(Dense(1, activation='sigmoid'))
 
     return mdl
@@ -74,7 +77,7 @@ def compile_and_run_model(mdl, train_data, epochs=20, batch_size=128):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--drop_rate", help="Drop rate", nargs='?', action='store', default=0.5, type=float)
+    parser.add_argument("--drop_rate", help="Drop rate", nargs='?', action='store', default=0.25, type=float)
     parser.add_argument("--input_dim", help="Input dimension for the network.", action='store', nargs='?', default=20, type=int)
     parser.add_argument("--bs", help="Number of rows or size of the tensor", action='store', nargs='?', default=10000, type=int)
     parser.add_argument("--output", help="Output from First & Hidden Layers", action='store',  nargs='?', default=64, type=int)
